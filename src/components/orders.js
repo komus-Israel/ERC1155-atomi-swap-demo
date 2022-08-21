@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Web3 from "web3"
 import { loadWeb3, stringToHex, openOrders, withdrawTtokenOrder, withdrawCtokenOrder, depositCtokenOrder, depositTtokenOrder, refundCtokenOrder, refundTtokenOrder, balance } from "../utils/functions"
 import { reject } from "lodash"
+import * as htlc from "../utils/HTLC.json";
 
 export const CreateOrders = ({chtlc, thtlc, ttoken, ctoken}) => {
 
@@ -338,6 +339,7 @@ export const Orders = ({chtlc, thtlc, cTokenContract, tTokenContract}) => {
                     }
                 )
 
+                console.log(ethClosedOrders)
                 
                 
 
@@ -366,6 +368,10 @@ export const Orders = ({chtlc, thtlc, cTokenContract, tTokenContract}) => {
                 console.log(switchError)
                 console.log("Failed to switch to the network")
               }
+
+
+              
+            
         }
 
 
@@ -378,7 +384,7 @@ export const Orders = ({chtlc, thtlc, cTokenContract, tTokenContract}) => {
         <div>
             <button onClick={()=>handleOpenOrders("ethereum")}>View open orders on Ethereum</button>
 
-            <button onClick={()=>handleOpenOrders("ava")}>View closed orders on Avalaunche</button>
+            <button onClick={()=>handleOpenOrders("ava")}>View opened orders on Avalaunche</button>
             
             <div className="orders">
 
