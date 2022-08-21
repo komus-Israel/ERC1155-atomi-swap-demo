@@ -70,7 +70,7 @@ export const openOrders = async(chtlc, thtlc, _orderId, _ctokenId, _ttokenId, _c
     
     const account = await web3.eth.getAccounts()
 
-    console.log(secretKey)
+    
 
     const openTHTLC = await thtlc.methods.openOrder(_orderId, _ctokenId, _ttokenId, _ctokenAmount, _ttokenAmount, _ctokenReceiver, _ttokenReceiver, secretKey, secretHash).send({from: account[0]})
    

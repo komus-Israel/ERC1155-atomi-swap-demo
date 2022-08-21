@@ -170,7 +170,7 @@ export const Approve = ({cTokenContract, tTokenContract, web3}) => {
 
     const approveTHTLC = async() => {
         const account = await web3.eth.getAccounts()
-        await tTokenContract.methods.setApprovalForAll("0xd0B1854d0c6536EeA33BF17D3d39607178c48ccb", true).send({from: account[0]}).on(
+        await tTokenContract.methods.setApprovalForAll("0x008cE9b0873a7798e11eb2230483dbac6Aa8bFB0", true).send({from: account[0]}).on(
             "receipt", (receipt)=>{
                 console.log(receipt)
                 alert("htlc approved for TToken")
@@ -180,7 +180,7 @@ export const Approve = ({cTokenContract, tTokenContract, web3}) => {
 
     const approveCHTLC = async() => {
         const account = await web3.eth.getAccounts()
-        await cTokenContract.methods.setApprovalForAll("0xdE962ccC1b81cE24c954F94daE5EbC845027cFC6", true).send({from: account[0]}).on("receipt", (receipt)=>{
+        await cTokenContract.methods.setApprovalForAll("0x843ee4A0e6331859d1f502EFCEdf4aaC7c7EDd50", true).send({from: account[0]}).on("receipt", (receipt)=>{
             console.log(receipt)
             alert("htlc approved for CToken")
         }
