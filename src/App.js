@@ -72,7 +72,7 @@ function App() {
       <button>Connect wallet</button>
       <button onClick={()=>checkOrder(orderId, thtlc, web3)} >check Secret on ethereum</button>
       <button onClick={()=>checkOrder(orderId, chtlc, web3)}>check Secret on avalaunche</button>
-      <input value={orderId} onChange={(e)=>setOrderId(e.target.value)}/>
+      <input value={orderId} placeholder="order id" onChange={(e)=>setOrderId(e.target.value)}/>
       <Approve cTokenContract={avalauncheRPC} tTokenContract={ethereumRPC} web3={web3}/>
       <MintTokens cTokenContract={avalauncheRPC} tTokenContract={ethereumRPC} />
       <CreateOrders chtlc={chtlc} thtlc={thtlc} ctoken={avalauncheRPC} ttoken={ethereumRPC}/>

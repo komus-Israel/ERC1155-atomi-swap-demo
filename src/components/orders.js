@@ -12,10 +12,10 @@ export const CreateOrders = ({chtlc, thtlc, ttoken, ctoken}) => {
     const [ctokenReceiver, setCtokenReceiver] = useState("")
     const [ttokenReceiver, setTtokenReceiver] = useState("")
 
-    const [ctokenAmount, setCtokenAmount] = useState("10")
-    const [ttokenAmount, setTtokenAmount] = useState("12")
-    const [ttokenId, setTtokenId] = useState("5")
-    const [ctokenId, setCtokenId] = useState("1")
+    const [ctokenAmount, setCtokenAmount] = useState("")
+    const [ttokenAmount, setTtokenAmount] = useState("")
+    const [ttokenId, setTtokenId] = useState("")
+    const [ctokenId, setCtokenId] = useState("")
 
     const [secret, setSecret] = useState("")
     const [orderId, setOrderId] = useState("")
